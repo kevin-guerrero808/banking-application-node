@@ -1,9 +1,14 @@
-var category = function category(key) {
-  
-  // Write the Logic here
+const categories = {
+    pl: "Personal Loan",
+    vl: "Vehicle Loan",
+    el: "Education Loan",
+    hl: "Home Loan"
+}
 
-  };
-  
-  module.exports = {
-    category: category
-  };
+var category = function category(key) {
+    return categories[key.toLowerCase()];
+};
+
+module.exports = {
+    category: category,
+};
